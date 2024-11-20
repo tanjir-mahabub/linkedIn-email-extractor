@@ -1,0 +1,142 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #0077B5; /* LinkedIn blue */
+  --primary-color-dark: #005f8d; /* Darker LinkedIn blue */
+  --background-color: #f9f9f9; /* Light gray background */
+  --text-color: #333; /* Default text color */
+
+  /* Font Settings */
+  --font-family: Arial, sans-serif;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+
+  /* Border and Spacing */
+  --border-radius: 4px;
+  --card-border-radius: 6px;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --padding: 15px;
+}
+
+
+/* Overall body styles */
+body {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+/* Header styles */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--padding) 10px;
+  text-align: center;
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-color-dark);
+}
+
+/* Container for the content */
+.container {
+  padding: var(--padding);
+}
+
+/* Button styles */
+#extract-email {
+  padding: 12px 20px;
+  font-size: var(--font-size-medium);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+#extract-email:hover {
+  background-color: var(--primary-color-dark);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Loading text styles */
+#loading {
+  margin-top: 15px;
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Result container styles */
+#result-container {
+  margin-top: 20px;
+}
+
+/* Result card styles */
+.result-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: var(--card-border-radius);
+  padding: var(--padding);
+  margin-bottom: 15px;
+  box-shadow: var(--card-shadow);
+}
+
+.result-card h3 {
+  margin: 0 0 10px;
+  font-size: var(--font-size-medium);
+  color: var(--primary-color);
+}
+
+.result-card p {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+  word-wrap: break-word;
+}
+
+/* Full-screen overlay styles */
+#spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above all other elements */
+}
+
+/* Spinner styles */
+.spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1); /* Light gray border */
+  border-top-color: #0077B5; /* LinkedIn blue for the top color */
+  border-radius: 50%; /* Circular shape */
+  width: 50px; /* Diameter of the spinner */
+  height: 50px;
+  animation: spin 1s linear infinite; /* Spin continuously */
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Starting position */
+  }
+  to {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
+/* Spinner loading text */
+#spinner-overlay p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>LinkedIn Email Extractor</title>
+</head>
+<body>
+
+  <!-- Header section -->
+  <header>
+    LinkedIn Email Extractor
+  </header>
+
+  <!-- Main container -->
+  <div class="container">
+    <div id="app">
+      <button id="extract-email">Extract Email</button>
+      <div id="result-container" style="display: none;">
+        <div id="email-result" class="result-card">
+          <h3>Extracted Email:</h3>
+          <p id="extracted-email">Click "Extract Email" to begin.</p>
+        </div>
+        <div id="message-result" class="result-card">
+          <h3>Generated Message:</h3>
+          <p id="generated-message">No message generated yet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-screen spinner -->
+  <div id="spinner-overlay" style="display: none;">
+    <div class="spinner"></div>
+    <p>Extracting email, please wait...</p>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
